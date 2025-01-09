@@ -8,7 +8,6 @@ from .forms import BirthdayForm
 from .models import Birthday
 from .utils import calculate_birthday_countdown
 
-
 class BirthdayListView(ListView):
     model = Birthday
     ordering = 'id'

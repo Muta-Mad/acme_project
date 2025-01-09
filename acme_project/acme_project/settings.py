@@ -73,6 +73,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+# Адресс шаблона для логина
+LOGIN_URL = 'login'
 # Направляем пользователя после аунтификации
 LOGIN_REDIRECT_URL = 'pages:homepage' 
 # Подключаем бэкенд filebased.EmailBackend:
