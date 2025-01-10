@@ -6,7 +6,10 @@ SECRET_KEY = 'django-insecure-m&$lzdzkutvrbr5vt=jpm)7#g7cken_tk%($ty+w902n7wb#=e
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -15,8 +18,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'birthday.apps.BirthdayConfig',
     'pages.apps.PagesConfig',
+    'core.apps.CoreConfig',
     'django_bootstrap5',
 ]
 
@@ -31,6 +36,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'acme_project.urls'
+
+CSRF_FAILURE_VIEW = 'core.views.csrf_failure'
 
 TEMPLATES_DIR = BASE_DIR / 'templates'
 
